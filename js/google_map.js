@@ -56,7 +56,14 @@
        });
     });            
               
-              
+    
+      /* Map center on resize
+    =========================*/
+    var getCen = map.getCenter();
+
+    google.maps.event.addDomListener(window, 'resize', function() {
+        map.setCenter(getCen);
+    });
               
               
   }
